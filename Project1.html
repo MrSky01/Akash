@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY LITTLE SPACE - It tells a story</title>
+<style>
+    /* Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: #f8f5f2;
+        color: #4f4d4d;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    header {
+        background-color: white;
+        color: black;
+        padding: 1rem 0;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .logo {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .tagline {
+        font-style: italic;
+        color: navy;
+        font-size: 1rem;
+    }
+
+    nav {
+        background-color: #16213e;
+        padding: 1rem;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    nav li {
+        margin: 0.5rem 1rem;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: lightblue;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .hero {
+        background-color: lightblue;
+        color: darkcyan;
+        padding: 3rem;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .featured-books {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .book-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+
+    .book-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .book-cover {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .book-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .book-info {
+        padding: 1rem;
+    }
+
+    .book-title {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .book-author {
+        color: black;
+        margin-bottom: 0.5rem;
+    }
+
+    .book-price {
+        font-weight: bold;
+        color: red;
+        margin-top: 0.5rem;
+    }
+
+    footer {
+        background-color: lightcyan;
+        color: black;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .footer-links a {
+        color: black;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .copyright {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .hero {
+            padding: 2rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 0.5rem 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 0.95rem;
+        }
+
+        .book-title {
+            font-size: 1rem;
+        }
+
+        .book-price {
+            font-size: 1rem;
+        }
+
+        .container {
+            padding: 0 0.5rem;
+        }
+
+        .book-cover {
+            height: 220px;
+        }
+
+        .footer-links {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">MY LITTLE SPACE</div>
+        <div class="tagline">For whom Books are everything</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Browse</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section class="hero">
+            <h1>Discover Your Next Favorite Book</h1>
+            <p>Explore Our More Exciting And Breathe Taking All Genre Books And Enjoy your stories.</p>
+        </section>
+        
+        <h2>Featured Books</h2>
+        <div class="featured-books">
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="https://images3.penguinrandomhouse.com/cover/9780593910672" alt="Book cover: A little life by Hanya Yanagihara-about art and creativity, aspiration and achievement, family and friendship, and identity and discovery">
+                </div>
+                <div class="book-info">
+                    <div class="book-title">A little Life</div>
+                    <div class="book-author">Hanya Yanagihara</div>
+                    <div class="book-price">Rs 500</div>
+                </div>
+            </div>
+            
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="https://media.thuprai.com/front_covers/Karnali_Blues_-_english_-_Buddhisagar.jpeg" alt="Book cover:Karnali Blues by Buddhisagar-about a young boy who travels through different phases of his life with his parents">
+                </div>
+                <div class="book-info">
+                    <div class="book-title">Karnali Blues</div>
+                    <div class="book-author">BuddhiSagar</div>
+                    <div class="book-price">Rs 450</div>
+                </div>
+            </div>
+            
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="https://booksmandala.com/_next/image?url=https%3A%2F%2Fbooks.bizmandala.com%2Fmedia%2Fbooks%2F9780241457290%2F9780241457290-7374.webp&w=3840&q=75" alt="Book cover: When Things Don't Go Your Way
+                     by Haemin Sunim - a book that navigate life's challenges with resilience and grace.">
+                </div>
+                <div class="book-info">
+                    <div class="book-title">When Things Don't Go Your Way</div>
+                    <div class="book-author">Haemin Sunim</div>
+                    <div class="book-price">Rs 670</div>
+                </div>
+            </div>
+            
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="https://media.thuprai.com/front_covers/my-neighbor-totoro-uqpiflf0.jpg" alt="Book cover:My Neighbor Totoro by Tsugiko Kubo - Magical imaginary novel about imagination and emotions">
+                </div>
+                <div class="book-info">
+                    <div class="book-title">My Neighbour Totoro</div>
+                    <div class="book-author">Tsugiko Kubo</div>
+                    <div class="book-price">Rs 600</div>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="https://markmanson.net/wp-content/uploads/2022/12/book-subtle-art.png" alt="Book cover: The Subtle Art of Not Giving a F*ck by Mark Manson-learning the way to live life on own.">
+                </div>
+                <div class="book-info">
+                    <div class="book-title">The Subtle Art of Not Giving a F*ck</div>
+                    <div class="book-author">Mark Manson</div>
+                    <div class="book-price">Rs 700</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="copyright">
+            &copy; 2004 MyLittleSpace. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
